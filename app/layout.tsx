@@ -1,5 +1,8 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const sourceSans3 = Source_Sans_3({subsets:['latin'],variable:'--font-sans'});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +21,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={cn(geistSans.variable, geistMono.variable, "font-sans", sourceSans3.variable)}>
       <body>{children}</body>
     </html>
   );
