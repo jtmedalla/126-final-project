@@ -20,7 +20,7 @@ Use the following command to install the dependencies into your system:
 ```bash
 pnpm install
 ```
-
+Also ensure Docker is installed and running on your system:  docker.com/products/docker-desktop.
 ## 4. Start database
 
 ```bash
